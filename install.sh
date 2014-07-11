@@ -10,6 +10,10 @@ mkdir -p ~/.vim
 cp vim/vimrc ~/.vimrc
 cp -rf vim/colors ~/.vim/
 
+# Xinit
+
+cp xinit/xinitrc ~/.xinitrc 
+
 # Zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
