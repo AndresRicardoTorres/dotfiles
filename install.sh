@@ -11,8 +11,10 @@ cp vim/vimrc ~/.vimrc
 cp -rf vim/colors ~/.vim/
 
 # Xinit
-
 cp xinit/xinitrc ~/.xinitrc 
+
+# Yaourt
+cp yaourt/yaourtrc ~/.yaourtrc
 
 # Zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
