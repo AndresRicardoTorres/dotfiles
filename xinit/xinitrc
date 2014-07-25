@@ -15,5 +15,14 @@ fi
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
+
+# Teclado en latinoamericano
 setxkbmap latam
+
+# No beep del sistema
+rmmod pcspkr
+
+# VIM !
+export EDITOR=/usr/bin/vim
+
 exec $1

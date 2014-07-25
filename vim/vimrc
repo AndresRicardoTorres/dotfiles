@@ -30,6 +30,9 @@ Plugin 'gmarik/Vundle.vim'
 " very nice file browser
 Plugin 'scrooloose/nerdtree'
 
+" Limpia trailing whitespaces
+Plugin 'ntpeters/vim-better-whitespace'
+
 " Doxygen
 Plugin 'DoxygenToolkit.vim'
 
@@ -51,6 +54,8 @@ filetype plugin indent on    " required
 
 :set tabstop=2
 :set expandtab
+:set colorcolumn=80
+:set number
 
 syntax on
 colorscheme BusyBee_cats
