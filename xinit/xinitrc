@@ -25,4 +25,5 @@ rmmod pcspkr
 # VIM !
 export EDITOR=/usr/bin/vim
 
-exec $1
+# exec $1
+exec awesome
