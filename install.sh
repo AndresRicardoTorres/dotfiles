@@ -8,6 +8,10 @@ cp awesome/rc.lua ~/.config/awesome/rc.lua
 # Git
 cp git/gitconfig ~/.gitconfig
 
+# Htop
+mkdir -p ~/.config/htop
+cp htop/htoprc ~/.config/htop/htoprc
+
 # Vim
 mkdir -p ~/.vim
 if [ ! -d ~/.vim/bundle/ ]; then
@@ -15,6 +19,7 @@ if [ ! -d ~/.vim/bundle/ ]; then
 fi
 cp vim/vimrc ~/.vimrc
 cp -rf vim/colors ~/.vim/
+vim +PluginInstall +qall
 
 # Xinit
 cp xinit/xinitrc ~/.xinitrc 
