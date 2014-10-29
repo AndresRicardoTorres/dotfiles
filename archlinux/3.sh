@@ -12,6 +12,8 @@
 ## pacman -S sudo
 ## Check /etc/pacman.conf => activate multilib for skype and steam
 
+## echo "my-arch" >> /etc/hostname
+
 ## Create user
 groupadd sudo
 useradd andresrtm -m
@@ -29,7 +31,7 @@ pacman -S xf86-video-intel
 pacman -S xf86-input-synaptics
 
 ## Util
-pacman -S htop bash-completion unzip  unrar zsh bc
+pacman -S htop bash-completion unzip unrar zsh bc
 
 ## Web
 pacman -S firefox chromium skype flashplugin

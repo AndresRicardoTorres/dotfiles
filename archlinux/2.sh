@@ -2,6 +2,7 @@
 echo "es_CO.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=es_CO.UTF-8" > /etc/locale.conf
 export LANG=es_CO.UTF-8
+locale-gen
 
 ## Time and date
 ln -s /usr/share/zoneinfo/America/Bogota /etc/localtime
@@ -11,7 +12,15 @@ hwclock --systohc --utc
 echo "KEYMAP=la-latin1" > /etc/vconsole.conf
 
 ## Network config
-pacman -S iw wpa_supplicant dialog 
+WIRELESS_DEV=`ip link | grep wlp | awk '{print $2}'| sed 's/://' | sed '1!d'`
+if [[ -n $WIRELESS_DEV ]]; then
+  pacman -S iw wireless_tools wpa_actiond wpa_supplicant dialog 
+fi
+WIRED_DEV=`ip link | grep enp | awk '{print $2}'| sed 's/://' | sed '1!d'`
+if [[-n $WIRED_DEV ]]; then
+  systemctl enable dhcpcd@${WIRED_DEV}.service
+fi
+
 
 ## Create an initial ramdisk environment ( TODO: Confirm this is not necessary)
 mkinitcpio -p linux
